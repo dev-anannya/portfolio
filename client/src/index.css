@@ -1,0 +1,14 @@
+body {
+  background-color: #1a1a1a; /* Dark background color */
+  color: #ffffff; /* Light text color */
+  font-family: 'Proxima Nova', sans-serif; /* Default font */
+  margin: 0; /* Remove default margin */
+}
+
+h1 {
+  font-size: 36px; /* Adjust as needed */
+  font-family: 'Didot', serif; /* Use Didot for headers */
+}
+
+/* Additional styles for other elements as needed */
+
