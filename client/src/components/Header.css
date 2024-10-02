@@ -1,5 +1,8 @@
 /* src/components/Header.css */
 .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative; /* Position relative to place overlay */
     text-align: center; /* Center text in header */
     height: 100vh; /* Set height to 60% of the viewport height */
@@ -7,7 +10,7 @@
     background-image: url('../assets/images/header1.jpeg'); /* Path to your header image */
     background-size: cover; /* Cover the entire area */
     background-position: center; /* Center the image */
-    background-attachment:fixed; /* Make the background fixed */
+    background-attachment: fixed; /* Make the background fixed */
 }
 
 .overlay {
@@ -29,10 +32,11 @@
     color: white; /* Text color */
     font-family: 'Didot', serif; /* Use Didot font for text */
     text-align: center; /* Center text alignment */
+    margin-top: -10px;
 }
 
 .header-content h1 {
-    font-size: 4rem; /* Adjust header size */
+    font-size: 3rem; /* Adjust header size */
     margin: 0; /* Remove margin */
 }
 

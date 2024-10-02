@@ -1,51 +1,46 @@
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif; /* Use Poppins for body text */
-  background-color: #222; /* Dark mode background */
+  background-color: #1a1a1a; /* Dark mode background */
   color: #fff; /* White text color */
-  padding-top: 60px; /* Ensure the content is below the navbar */
-  padding-right: 15px;
+  /* padding-top: 60px; Ensure the content is below the navbar */
+  /* padding-right: 15px; */
   font-size: 18px; /* Base font size for body */
 }
 
-h1 {
+/* General headings (these should not interfere with the header in header.css) */
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Didot', serif; /* Use Didot for headings */
+  margin: 20px 0; /* Margin around headings */
+}
+
+h1 {
   font-size: 48px; /* Heading 1 size */
-  margin: 20px 0; /* Margin around heading */
 }
 
 h2 {
-  font-family: 'Didot', serif;
   font-size: 32px; /* Heading 2 size */
-  margin: 20px 0;
 }
 
 h3 {
-  font-family: 'Didot', serif;
   font-size: 28px; /* Heading 3 size */
-  margin: 20px 0;
 }
 
 h4 {
-  font-family: 'Didot', serif;
   font-size: 24px; /* Heading 4 size */
-  margin: 20px 0;
 }
 
 h5 {
-  font-family: 'Didot', serif;
   font-size: 20px; /* Heading 5 size */
-  margin: 20px 0;
 }
 
 h6 {
-  font-family: 'Didot', serif;
   font-size: 18px; /* Heading 6 size */
-  margin: 20px 0;
 }
-
-/* Other styles remain unchanged */
-
 /* Navbar styles */
 .navbar {
   z-index: 1000; /* Ensure navbar is on top */
@@ -64,24 +59,7 @@ h6 {
   padding: 1cm; /* Add padding as needed */
 }
 
-/* Header Section */
-.header {
-  background-color: #222; /* Dark header background */
-  padding: 2cm; /* Padding around the header */
-  text-align: center; /* Center text in header */
-}
-
-.header h1 {
-  font-size: 3rem; /* Header font size */
-  color: #ffffff; /* Header text color */
-}
-
-/* Other sections */
-.section {
-  padding: 2cm; /* Padding for sections */
-}
-
-/* Add any other styles you need here */
+/* Section styles excluding header (to avoid overriding header.css) */
 
 /* Dark mode toggle styles */
 .toggle {

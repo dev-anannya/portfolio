@@ -8,7 +8,7 @@ const NavbarContainer = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px; /* Adjust padding for navbar */
-  height: 60px; /* Increased height of the navbar */
+  height: 40px; /* Increased height of the navbar */
   background-color: #333; /* Dark background */
   color: white;
   position: fixed; /* Fixed position */
@@ -20,7 +20,8 @@ const NavbarContainer = styled.nav`
 
 const NameContainer = styled.div`
   margin-left: 50px; /* Shift the name 2cm (approx. 20px) to the right */
-  font-size: 20px; /* Font size for name */
+  font-size: 15px; /* Font size for name */
+  font-family: 'Poppins', sans-serif;
 `;
 
 const NavbarLinks = styled.div`
@@ -34,8 +35,9 @@ const NavbarLinks = styled.div`
     text-decoration: none; /* Remove underline */
     padding: 5px; /* Add padding to links */
     transition: background-color 0.3s; /* Smooth transition */
-    font-size: 20px; /* Increased font size for links */
-
+    font-size: 15px; /* Increased font size for links */
+    font-family: 'Poppins', sans-serif;
+    
     &:hover {
       background-color: #444; /* Darker background on hover */
       border-radius: 5px; /* Rounded corners on hover */
@@ -48,7 +50,7 @@ const ToggleButton = styled.button`
   border: none; /* No border */
   color: white; /* White icon color */
   cursor: pointer; /* Pointer cursor on hover */
-  font-size: 1.5rem; /* Size of the icon */
+  font-size: 1rem; /* Size of the icon */
   width: 40px; /* Fixed width */
   height: 40px; /* Fixed height */
 
@@ -63,16 +65,17 @@ const Navbar = () => {
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
     // You can add functionality to switch between dark and light mode here
+    document.body.classList.toggle('light-mode'); // Toggle light mode class
   };
 
   return (
     <NavbarContainer>
       <NameContainer>Anannya Shilotri</NameContainer>
       <NavbarLinks>
-        <a href="#home">Home</a>
+        <a href="#header">Home</a>
         <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
-        <a href="#resume">Resume</a>
         <a href="#contact">Contact Me</a>
         <ToggleButton onClick={toggleDarkMode}>
           <FontAwesomeIcon icon={isDarkMode ? faMoon : faSun} />

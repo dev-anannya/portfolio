@@ -1,7 +1,11 @@
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
 body {
   background-color: #1a1a1a; /* Dark background color */
   color: #ffffff; /* Light text color */
-  font-family: 'Proxima Nova', sans-serif; /* Default font */
+  font-family: 'Poppins', sans-serif; /* Default font */
   margin: 0; /* Remove default margin */
 }
 
@@ -12,3 +16,22 @@ h1 {
 
 /* Additional styles for other elements as needed */
 
+/* Light Mode Styles */
+body.light-mode {
+  background-color: #ffffff; /* Light background */
+  color: #000000; /* Dark text */
+}
+
+.navbar.light-mode {
+  background-color: #f0f0f0; /* Light navbar */
+  color: #000000; /* Dark text in the navbar */
+}
+
+/* Adjust links in light mode */
+body.light-mode a {
+  color: #000000; /* Dark links */
+}
+
+body.light-mode a:hover {
+  background-color: #e0e0e0; /* Lighter hover effect */
+}
