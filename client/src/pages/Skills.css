@@ -6,7 +6,7 @@
     padding-right: 2cm;
     padding-bottom: 90px; 
     margin-bottom: 50px; 
-    background-color: #1a1a1a;
+    background-color:black;
     color: #fff;
     transform: translateY(30px); /* Start slightly lower for slide-in */
     opacity: 0; /* Initially hidden */

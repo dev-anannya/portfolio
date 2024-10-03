@@ -16,12 +16,16 @@ const NavbarContainer = styled.nav`
   top: 0; /* Aligns it to the top of the page */
   z-index: 1000; /* Stays above other elements */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
 `;
 
-const NameContainer = styled.div`
+const NameButton = styled.a`
   margin-left: 50px; /* Shift the name 2cm (approx. 20px) to the right */
   font-size: 15px; /* Font size for name */
   font-family: 'Poppins', sans-serif;
+  text-decoration: none; /* Remove underline */
+  color: white; /* Keep text color as white */
+  cursor: pointer; /* Show pointer cursor to indicate it's clickable */
 `;
 
 const NavbarLinks = styled.div`
@@ -34,13 +38,29 @@ const NavbarLinks = styled.div`
     color: white; /* White text color for links */
     text-decoration: none; /* Remove underline */
     padding: 5px; /* Add padding to links */
-    transition: background-color 0.3s; /* Smooth transition */
     font-size: 15px; /* Increased font size for links */
     font-family: 'Poppins', sans-serif;
-    
+    position: relative; /* Required for the hover effect */
+    // text-transform: uppercase; /* Make text uppercase */
+    letter-spacing: 1px;
+
+    /* Hover Effect */
+    &:hover::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: white;
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+      transform: scaleX(1); /* Hover transition */
+    }
+
     &:hover {
-      background-color: #444; /* Darker background on hover */
-      border-radius: 5px; /* Rounded corners on hover */
+      color: white; /* Ensures the color stays white on hover */
     }
   }
 `;
@@ -48,7 +68,7 @@ const NavbarLinks = styled.div`
 const ToggleButton = styled.button`
   background: none; /* No background */
   border: none; /* No border */
-  color: white; /* White icon color */
+  color: ${({ isDarkMode }) => (isDarkMode ? 'white' : '#000')};
   cursor: pointer; /* Pointer cursor on hover */
   font-size: 1rem; /* Size of the icon */
   width: 40px; /* Fixed width */
@@ -64,13 +84,12 @@ const Navbar = () => {
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
-    // You can add functionality to switch between dark and light mode here
     document.body.classList.toggle('light-mode'); // Toggle light mode class
   };
 
   return (
     <NavbarContainer>
-      <NameContainer>Anannya Shilotri</NameContainer>
+      <NameButton href="#header">Anannya Shilotri</NameButton> {/* Turn name into a button */}
       <NavbarLinks>
         <a href="#header">Home</a>
         <a href="#about">About Me</a>

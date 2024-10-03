@@ -5,7 +5,7 @@ html {
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif; /* Use Poppins for body text */
-  background-color: #1a1a1a; /* Dark mode background */
+  background-color: black; /* Dark mode background */
   color: #fff; /* White text color */
   /* padding-top: 60px; Ensure the content is below the navbar */
   /* padding-right: 15px; */
@@ -50,6 +50,10 @@ h6 {
   justify-content: space-between;
   align-items: center;
   padding: 0 2cm; /* Adjust padding as needed */
+}
+
+.light-mode h1, .light-mode h2, .light-mode h3, .light-mode h4, .light-mode h5, .light-mode h6 {
+  color: #000000; /* Heading color for light mode */
 }
 
 /* Navbar links */
