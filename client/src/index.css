@@ -18,8 +18,8 @@ h1 {
 
 /* Light Mode Styles */
 body.light-mode {
-  background-color: #ffffff; /* Light background */
-  color: #000000; /* Dark text */
+  background-color: black; /* Light background */
+  color: #fff; /* Dark text */
 }
 
 .navbar.light-mode {
@@ -35,3 +35,4 @@ body.light-mode a {
 body.light-mode a:hover {
   background-color: #e0e0e0; /* Lighter hover effect */
 }
+

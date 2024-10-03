@@ -9,14 +9,21 @@ const NavbarContainer = styled.nav`
   align-items: center;
   padding: 10px 20px; /* Adjust padding for navbar */
   height: 40px; /* Increased height of the navbar */
-  background-color: #333; /* Dark background */
+  background-color: black; /* Default dark background */
   color: white;
   position: fixed; /* Fixed position */
   width: 100%; /* Full width */
   top: 0; /* Aligns it to the top of the page */
   z-index: 1000; /* Stays above other elements */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.2); /* White shadow in dark mode */
   letter-spacing: 1px;
+
+  /* Light Mode Styles */
+  &.light-mode {
+    background-color: white; /* Change background to white in light mode */
+    color: black; /* Change text color to black */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Lighter shadow in light mode */
+  }
 `;
 
 const NameButton = styled.a`
@@ -24,8 +31,12 @@ const NameButton = styled.a`
   font-size: 15px; /* Font size for name */
   font-family: 'Poppins', sans-serif;
   text-decoration: none; /* Remove underline */
-  color: white; /* Keep text color as white */
-  cursor: pointer; /* Show pointer cursor to indicate it's clickable */
+  color: white; /* Default text color as white */
+
+  /* Light Mode Styles */
+  ${NavbarContainer}.light-mode & {
+    color: black; /* Change text color to black in light mode */
+  }
 `;
 
 const NavbarLinks = styled.div`
@@ -41,7 +52,6 @@ const NavbarLinks = styled.div`
     font-size: 15px; /* Increased font size for links */
     font-family: 'Poppins', sans-serif;
     position: relative; /* Required for the hover effect */
-    // text-transform: uppercase; /* Make text uppercase */
     letter-spacing: 1px;
 
     /* Hover Effect */
@@ -62,13 +72,18 @@ const NavbarLinks = styled.div`
     &:hover {
       color: white; /* Ensures the color stays white on hover */
     }
+
+    /* Light Mode Styles */
+    ${NavbarContainer}.light-mode & {
+      color: black; /* Change text color to black in light mode */
+    }
   }
 `;
 
 const ToggleButton = styled.button`
   background: none; /* No background */
   border: none; /* No border */
-  color: ${({ isDarkMode }) => (isDarkMode ? 'white' : '#000')};
+  color: white; /* Default icon color */
   cursor: pointer; /* Pointer cursor on hover */
   font-size: 1rem; /* Size of the icon */
   width: 40px; /* Fixed width */
@@ -76,6 +91,11 @@ const ToggleButton = styled.button`
 
   &:focus {
     outline: none; /* Remove focus outline */
+  }
+
+  /* Light Mode Styles */
+  ${NavbarContainer}.light-mode & {
+    color: black; /* Change icon color to black in light mode */
   }
 `;
 
@@ -85,10 +105,12 @@ const Navbar = () => {
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
     document.body.classList.toggle('light-mode'); // Toggle light mode class
+    // Also toggle the navbar light mode class
+    document.querySelector('nav').classList.toggle('light-mode');
   };
 
   return (
-    <NavbarContainer>
+    <NavbarContainer className={isDarkMode ? '' : 'light-mode'}>
       <NameButton href="#header">Anannya Shilotri</NameButton> {/* Turn name into a button */}
       <NavbarLinks>
         <a href="#header">Home</a>

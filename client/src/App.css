@@ -52,7 +52,7 @@ h6 {
   padding: 0 2cm; /* Adjust padding as needed */
 }
 
-.light-mode h1, .light-mode h2, .light-mode h3, .light-mode h4, .light-mode h5, .light-mode h6 {
+.light-mode h1, .light-mode h3, .light-mode h4, .light-mode h5, .light-mode h6 {
   color: #000000; /* Heading color for light mode */
 }
 
