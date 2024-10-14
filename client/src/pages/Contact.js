@@ -39,9 +39,7 @@ const Contact = () => {
         <a href="mailto:anannyashilotri@gmail.com" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faEnvelope} />
         </a>
-          <a href="https://www.linkedin.com/in/anannyashilotri
-
-" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/anannyashilotri" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
           <a href="https://github.com/dev-anannya" target="_blank" rel="noopener noreferrer">

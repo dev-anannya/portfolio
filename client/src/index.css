@@ -18,7 +18,7 @@ h1 {
 
 /* Light Mode Styles */
 body.light-mode {
-  background-color: black; /* Light background */
+  /* background-color: transparent; Light background */
   color: #fff; /* Dark text */
 }
 

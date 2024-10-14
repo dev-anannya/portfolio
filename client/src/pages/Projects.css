@@ -3,7 +3,7 @@
   padding-top: 170px;
   padding-left: 2cm;
   padding-right: 2cm;
-  padding-bottom: 90px; 
+  padding-bottom: 180px; 
   margin-bottom: 100px; 
   background-color: black; /* Dark mode background */
   color: white; /* Dark mode text color */
@@ -166,7 +166,7 @@
 .indicator {
   width: 10px;
   height: 10px;
-  background-color: #fff;
+  background-color: #999;
   border-radius: 50%;
   margin: 0 5px;
   cursor: pointer;
@@ -174,7 +174,21 @@
 }
 
 .indicator.active {
+  background-color: #fff;
+}
+
+.light-mode .indicator{
+  width: 10px;
+  height: 10px;
   background-color: #999;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+.light-mode .indicator.active{
+  background-color: #333333;
 }
 
 /* Media Queries for Responsiveness */

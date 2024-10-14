@@ -4,8 +4,8 @@
   padding-top: 150px;
   padding-left: 2cm;
   padding-right: 2cm;
-  padding-bottom: 90px; 
-  margin-bottom: 50px; 
+  padding-bottom: 90px;
+  margin-bottom: 50px;
   background-color: black; /* Dark mode background */
   color: #fff; /* Dark mode text color */
   transform: translateY(30px); /* Start slightly lower for slide-in */
@@ -53,39 +53,21 @@
 
 /* Style for the dropdown titles */
 .dropdown-title {
-  background-color: #1a1a1a; /* Dark mode background */
+  background-color: black; /* Dark mode background */
   color: #fff; /* Dark mode text color */
   font-size: 18px;
   font-family: 'Poppins', sans-serif;
   padding: 10px;
   border-bottom: 2px solid #fff;
   font-weight: normal; /* Ensure the title is not bold */
+  text-align: center;
 }
 
-/* Light mode styles for dropdown titles */
-.light-mode .dropdown-title {
-  background-color: #1a1a1a; /* Dark mode background */
-  color: #fff; /* Dark mode text color */
-  font-size: 18px;
-  font-family: 'Poppins', sans-serif;
-  padding: 10px;
-  border-bottom: 2px solid #fff;
-  font-weight: normal; /* Ensure the title is not bold */
+.light-mode .dropdown-title{
+  color: #fff;
 }
-
 /* Style for the dropdown list */
 .dropdown-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  background-color: #444; /* Dark mode background */
-  color: #fff; /* Dark mode text color */
-  border: 1px solid #333;
-  border-radius: 5px;
-}
-
-/* Light mode styles for dropdown list */
-.light-mode .dropdown-list {
   list-style: none;
   padding: 0;
   margin: 0;

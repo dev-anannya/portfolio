@@ -1,118 +1,203 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import { faMoon, faSun, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const NavbarContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px; /* Adjust padding for navbar */
-  height: 40px; /* Increased height of the navbar */
-  background-color: black; /* Default dark background */
+  padding: 10px 20px;
+  height: 40px;
+  background-color: black;
   color: white;
-  position: fixed; /* Fixed position */
-  width: 100%; /* Full width */
-  top: 0; /* Aligns it to the top of the page */
-  z-index: 1000; /* Stays above other elements */
-  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.2); /* White shadow in dark mode */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
   letter-spacing: 1px;
 
-  /* Light Mode Styles */
   &.light-mode {
-    background-color: white; /* Change background to white in light mode */
-    color: black; /* Change text color to black */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Lighter shadow in light mode */
+    background-color: white;
+    color: black;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
 `;
 
 const NameButton = styled.a`
-  margin-left: 50px; /* Shift the name 2cm (approx. 20px) to the right */
-  font-size: 15px; /* Font size for name */
+  font-size: 15px;
   font-family: 'Poppins', sans-serif;
-  text-decoration: none; /* Remove underline */
-  color: white; /* Default text color as white */
+  text-decoration: none;
+  color: white;
 
-  /* Light Mode Styles */
   ${NavbarContainer}.light-mode & {
-    color: black; /* Change text color to black in light mode */
+    color: black;
+  }
+
+  @media (max-width: 768px) {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
   }
 `;
 
 const NavbarLinks = styled.div`
   display: flex;
-  gap: 15px; /* Space between links */
-  margin-left: 20px; /* Shift the buttons 1cm (approx. 10px) to the right */
-  margin-right: 70px; /* Add margin-right to create 2cm space */
+  gap: 15px;
+  margin-left: 20px;
+  margin-right: 70px;
 
   a {
-    color: white; /* White text color for links */
-    text-decoration: none; /* Remove underline */
-    padding: 5px; /* Add padding to links */
-    font-size: 15px; /* Increased font size for links */
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-size: 15px;
     font-family: 'Poppins', sans-serif;
-    position: relative; /* Required for the hover effect */
+    position: relative;
     letter-spacing: 1px;
 
-    /* Hover Effect */
-    &:hover::after {
-      content: "";
+    &::after {
+      content: '';
       display: block;
       width: 100%;
       height: 2px;
       background: white;
       position: absolute;
-      bottom: -2px;
+      bottom: 0;
       left: 0;
       transform: scaleX(0);
       transition: transform 0.3s ease;
-      transform: scaleX(1); /* Hover transition */
     }
 
-    &:hover {
-      color: white; /* Ensures the color stays white on hover */
+    &:hover::after {
+      transform: scaleX(1);
     }
 
-    /* Light Mode Styles */
     ${NavbarContainer}.light-mode & {
-      color: black; /* Change text color to black in light mode */
+      color: black;
+
+      &::after {
+        background: black;
+      }
     }
+  }
+
+  @media (max-width: 768px) {
+    display: none; /* Hide navbar links on mobile */
   }
 `;
 
 const ToggleButton = styled.button`
-  background: none; /* No background */
-  border: none; /* No border */
-  color: white; /* Default icon color */
-  cursor: pointer; /* Pointer cursor on hover */
-  font-size: 1rem; /* Size of the icon */
-  width: 40px; /* Fixed width */
-  height: 40px; /* Fixed height */
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 40px;
+  height: 40px;
 
   &:focus {
-    outline: none; /* Remove focus outline */
+    outline: none;
   }
 
-  /* Light Mode Styles */
   ${NavbarContainer}.light-mode & {
-    color: black; /* Change icon color to black in light mode */
+    color: black;
+  }
+
+  @media (max-width: 768px) {
+    display: block; /* Make it visible on small screens */
+    position: absolute;
+    right: 20px; /* Position it to the right */
+  }
+`;
+
+const HamburgerIcon = styled.button`
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+
+    ${NavbarContainer}.light-mode & {
+      color: black;
+    }
+  }
+`;
+
+const SideMenu = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: black;
+  color: white;
+  padding-top: 60px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1001;
+
+  &.open {
+    transform: translateX(0);
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+  }
+
+  ${NavbarContainer}.light-mode & {
+    background-color: white;
+    color: black;
+
+    a {
+      color: black;
+    }
   }
 `;
 
 const Navbar = () => {
-  const [isDarkMode, setIsDarkMode] = useState(true); // State to track mode
+  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
-    document.body.classList.toggle('light-mode'); // Toggle light mode class
-    // Also toggle the navbar light mode class
+    document.body.classList.toggle('light-mode');
     document.querySelector('nav').classList.toggle('light-mode');
   };
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  // Close side menu if clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuOpen && !event.target.closest('.side-menu') && !event.target.closest('.hamburger-icon')) {
+        setMenuOpen(false);
+      }
+    };
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [menuOpen]);
+
   return (
     <NavbarContainer className={isDarkMode ? '' : 'light-mode'}>
-      <NameButton href="#header">Anannya Shilotri</NameButton> {/* Turn name into a button */}
-      <NavbarLinks>
+      <HamburgerIcon onClick={toggleMenu} className="hamburger-icon">
+        <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
+      </HamburgerIcon>
+      <NameButton href="#header">Anannya Shilotri</NameButton>
+      <NavbarLinks className="navbar-links">
         <a href="#header">Home</a>
         <a href="#about">About Me</a>
         <a href="#skills">Skills</a>
@@ -122,6 +207,16 @@ const Navbar = () => {
           <FontAwesomeIcon icon={isDarkMode ? faMoon : faSun} />
         </ToggleButton>
       </NavbarLinks>
+
+      {/* Side Menu */}
+      <SideMenu className={`side-menu ${menuOpen ? 'open' : ''}`}>
+        <a href="#header" onClick={toggleMenu}>Home</a>
+        <a href="#about" onClick={toggleMenu}>About Me</a>
+        <a href="#skills" onClick={toggleMenu}>Skills</a>
+        <a href="#projects" onClick={toggleMenu}>Projects</a>
+        <a href="#contact" onClick={toggleMenu}>Contact Me</a>
+      </SideMenu>
+      
     </NavbarContainer>
   );
 };

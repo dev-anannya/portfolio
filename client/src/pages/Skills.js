@@ -13,7 +13,6 @@ import netlifyLogo from '../assets/images/netlify.svg';
 import herokuLogo from '../assets/images/heroku.svg';
 import postmanLogo from '../assets/images/postman.svg';
 import unityLogo from '../assets/images/unity.svg';
-// import vuforiaLogo from '../assets/images/vuforia.svg';
 import blenderLogo from '../assets/images/blender.svg';
 import figmaLogo from '../assets/images/figma.svg';
 
@@ -94,9 +93,6 @@ const Skills = () => {
             <li>
               Unity <img src={unityLogo} alt="Unity logo" className="skill-logo" />
             </li>
-            {/* <li>
-              Vuforia <img src={vuforiaLogo} alt="Vuforia logo" className="skill-logo" />
-            </li> */}
             <li>
               Blender <img src={blenderLogo} alt="Blender logo" className="skill-logo" />
             </li>

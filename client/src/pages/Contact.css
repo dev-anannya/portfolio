@@ -1,7 +1,7 @@
 /* Contact section */
 .contact-section {
   margin-top: 50px;
-  padding-top: 170px;
+  padding-top: 90px;
   padding-left: 2cm;
   padding-right: 2cm;
   padding-bottom: 90px; 
@@ -10,7 +10,8 @@
   color: white; /* Light text */
   padding: 50px; /* Ample padding */
   text-align: center; /* Centered text */
-
+  background-color: black;
+  
   /* Fade-in effect */
   opacity: 0; /* Start hidden */
   transform: translateY(30px); /* Start slightly lower */
@@ -40,6 +41,7 @@
   display: flex;
   width: 80%; /* Full width for inputs */
   max-width: 500px; /* Limit maximum width */
+  min-width: 500px;
   padding: 10px; /* Padding for inputs */
   margin: 10px 0; /* Space between inputs */
   border: none;
