@@ -97,6 +97,9 @@ const ToggleButton = styled.button`
   font-size: 1rem;
   width: 40px;
   height: 40px;
+  position: absolute; /* Ensure it's positioned */
+  right: 50px; /* Align to the right */
+  top: 10px; /* Align to the top */
 
   &:focus {
     outline: none;
@@ -108,8 +111,6 @@ const ToggleButton = styled.button`
 
   @media (max-width: 768px) {
     display: block; /* Make it visible on small screens */
-    position: absolute;
-    right: 20px; /* Position it to the right */
   }
 `;
 
@@ -203,9 +204,6 @@ const Navbar = () => {
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact Me</a>
-        <ToggleButton onClick={toggleDarkMode}>
-          <FontAwesomeIcon icon={isDarkMode ? faMoon : faSun} />
-        </ToggleButton>
       </NavbarLinks>
 
       {/* Side Menu */}
@@ -216,7 +214,11 @@ const Navbar = () => {
         <a href="#projects" onClick={toggleMenu}>Projects</a>
         <a href="#contact" onClick={toggleMenu}>Contact Me</a>
       </SideMenu>
-      
+
+      {/* Toggle Button for small screens */}
+      <ToggleButton onClick={toggleDarkMode}>
+        <FontAwesomeIcon icon={isDarkMode ? faMoon : faSun} />
+      </ToggleButton>
     </NavbarContainer>
   );
 };

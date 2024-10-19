@@ -110,3 +110,45 @@
 .light-mode .social-links a {
   color: white; /* Keep icons white in light mode */
 }
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+  .contact-section {
+    padding-left: 1cm;
+    padding-right: 1cm;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .contact-title {
+    font-size: 28px; /* Slightly smaller font for smaller screens */
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%; /* Full width on smaller screens */
+    min-width: auto; /* Remove fixed min-width */
+  }
+
+  .contact-info {
+    font-size: 16px; /* Adjust font size for smaller screens */
+    text-align: center; /* Center align the contact info */
+  }
+
+  .social-links {
+    margin-top: 10px; /* Add some spacing above social links */
+    display: flex;
+    justify-content: center; /* Center the social links */
+  }
+
+  .submit-button {
+    padding: 8px 16px; /* Adjust padding for smaller screens */
+    font-size: 14px; /* Smaller font size for button */
+    transform: scaleX(1);
+  }
+  .submit-button::after{
+    transform: scaleX(1);
+  }
+  .submit-button:hover::after {
+    transform: scaleX(1);
+}}

@@ -156,6 +156,22 @@
   transform: scaleX(1);
 }
 
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .project-buttons {
+    flex-direction: column; /* Stack buttons vertically on smaller screens */
+    gap: 10px; /* Adjust gap between buttons */
+  }
+
+  /* Make underline visible at all times on small screens */
+  .project-btn::after {
+    transform: scaleX(0.7); /* Always show the underline on smaller screens */
+  }
+  .project-btn:hover::after{
+    transform: scaleX(0.7);
+  }
+}
+
 /* Carousel indicators (bubbles) */
 .carousel-indicators {
   display: flex;
@@ -177,7 +193,7 @@
   background-color: #fff;
 }
 
-.light-mode .indicator{
+.light-mode .indicator {
   width: 10px;
   height: 10px;
   background-color: #999;
@@ -187,22 +203,45 @@
   transition: background-color 0.4s ease;
 }
 
-.light-mode .indicator.active{
+.light-mode .indicator.active {
   background-color: #333333;
 }
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
+  .projects-section {
+    padding-top: 100px; /* Adjust padding */
+    padding-left: 1cm;
+    padding-right: 1cm;
+    padding-bottom: 100px; /* Adjust bottom padding */
+  }
+
   .carousel {
-      flex-direction: column; /* Stack items vertically on smaller screens */
-      width: 100%; /* Full width for mobile */
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    width: 100%; /* Full width for mobile */
   }
 
   .project-thumbnail {
-      width: 80%; /* Adjust thumbnail width for mobile */
+    width: 90%; /* Adjust thumbnail width for mobile */
+    margin-right: 0; /* Remove margin */
+    margin-bottom: 20px; /* Add margin below image */
   }
 
   .project-details {
-      max-width: 80%; /* Limit text width for mobile */
+    max-width: 100%; /* Full width for text on mobile */
+    text-align: center; /* Center align text on smaller screens */
+  }
+
+  .project-title {
+    font-size: 24px; /* Adjust font size for title */
+  }
+
+  .project-description {
+    font-size: 16px; /* Adjust font size for description */
+  }
+
+  .project-buttons {
+    flex-direction: column; /* Stack buttons vertically on smaller screens */
+    gap: 10px; /* Adjust gap between buttons */
   }
 }
