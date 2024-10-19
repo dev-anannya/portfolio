@@ -59,19 +59,22 @@ const Skills = () => {
             </li>
           </ul>
         </div>
-        <div className="dropdown">
+        {/* <div className="dropdown">
           <h3 className="dropdown-title">Frontend Development</h3>
           <ul className="dropdown-list">
             <li>
               React.js <img src={reactLogo} alt="React logo" className="skill-logo" />
             </li>
           </ul>
-        </div>
+        </div> */}
         <div className="dropdown">
-          <h3 className="dropdown-title">Backend Development</h3>
+          <h3 className="dropdown-title">Web Development</h3>
           <ul className="dropdown-list">
             <li>
               SQL <img src={sqlLogo} alt="SQL logo" className="skill-logo" />
+            </li>
+            <li>
+              React.js <img src={reactLogo} alt="React logo" className="skill-logo" />
             </li>
           </ul>
         </div>
