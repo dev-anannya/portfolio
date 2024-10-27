@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.de6dd6ad.css",
+    "main.js": "/static/js/main.27ee4284.js",
+    "static/media/header2-modified.jpeg": "/static/media/header2-modified.903e3aa680067c92e898.jpeg",
+    "static/media/about.jpg": "/static/media/about.739bc222d45d6e055b49.jpg",
+    "static/media/header.jpeg": "/static/media/header.6544f1c57bb5336cd0d2.jpeg",
+    "static/media/Anannya-Shilotri-Resume.pdf": "/static/media/Anannya-Shilotri-Resume.11cdace7c3b55a96a0f8.pdf",
+    "static/media/netlify.svg": "/static/media/netlify.8a7c6dda504c6931156747fcafcd6f1c.svg",
+    "static/media/sql.svg": "/static/media/sql.4ba1f61bb905723d4e6e9c8dc204e0e2.svg",
+    "static/media/react.svg": "/static/media/react.f57b349b4d9df56c9b48c916a8d5adfb.svg",
+    "static/media/unity.svg": "/static/media/unity.835cf38041d1c244ded9a630a5316752.svg",
+    "static/media/heroku.svg": "/static/media/heroku.cbfc4a0f510868367d7870a684df514f.svg",
+    "static/media/blender.svg": "/static/media/blender.c558f62fd445e3d85f1fb42079785190.svg",
+    "static/media/postman.svg": "/static/media/postman.1b55e00bdefce75ed3fca31f3ddd6938.svg",
+    "static/media/java.svg": "/static/media/java.5386b56c3206b6bd70b1053534d73dc3.svg",
+    "static/media/c.svg": "/static/media/c.f3c93ffaea1321f5cfc0092ef579e390.svg",
+    "static/media/python.svg": "/static/media/python.026a62687ef705a39cfc755d7457859c.svg",
+    "static/media/figma.svg": "/static/media/figma.ca5353b13a347f3097c85114a416c657.svg",
+    "static/media/javascript.svg": "/static/media/javascript.081325c6f229605dce15142ddd948d6d.svg",
+    "static/media/git.svg": "/static/media/git.43d387b77657117c0e407816cbf72476.svg",
+    "index.html": "/index.html",
+    "main.de6dd6ad.css.map": "/static/css/main.de6dd6ad.css.map",
+    "main.27ee4284.js.map": "/static/js/main.27ee4284.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.de6dd6ad.css",
+    "static/js/main.27ee4284.js"
+  ]
+}
