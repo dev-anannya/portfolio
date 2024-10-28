@@ -1,0 +1,31 @@
+/* Scrollbar Track */
+::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+  }
+  
+  /* Scrollbar Thumb (the draggable part) */
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* Default color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for sleek design */
+  }
+  
+  /* Scrollbar Thumb on Hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker on hover */
+  }
+  
+  /* Scrollbar Track (the space where the scrollbar sits) */
+  ::-webkit-scrollbar-track {
+    background: #333; /* Track color */
+    border-radius: 10px;
+  }
+  
+  /* Light mode customization */
+  body.light-mode ::-webkit-scrollbar-thumb {
+    background: #ccc; /* Lighter color for light mode */
+  }
+  
+  body.light-mode ::-webkit-scrollbar-track {
+    background: #f0f0f0; /* Lighter track color for light mode */
+  }
+  

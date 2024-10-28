@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.7e6014a6.chunk.css",
+    "main.js": "/portfolio/static/js/main.0c9445b1.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.0c9445b1.chunk.js.map",
+    "runtime~main.js": "/portfolio/static/js/runtime~main.f308c8e6.js",
+    "runtime~main.js.map": "/portfolio/static/js/runtime~main.f308c8e6.js.map",
+    "static/js/2.c4ff2b2d.chunk.js": "/portfolio/static/js/2.c4ff2b2d.chunk.js",
+    "static/js/2.c4ff2b2d.chunk.js.map": "/portfolio/static/js/2.c4ff2b2d.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "precache-manifest.68f0e126f4e74845d9c13a956e650092.js": "/portfolio/precache-manifest.68f0e126f4e74845d9c13a956e650092.js",
+    "service-worker.js": "/portfolio/service-worker.js",
+    "static/css/main.7e6014a6.chunk.css.map": "/portfolio/static/css/main.7e6014a6.chunk.css.map",
+    "static/media/Anannya-Shilotri-Resume.pdf": "/portfolio/static/media/Anannya-Shilotri-Resume.ec833c47.pdf",
+    "static/media/about.jpg": "/portfolio/static/media/about.0dcb9215.jpg",
+    "static/media/blender.svg": "/portfolio/static/media/blender.b9417561.svg",
+    "static/media/c.svg": "/portfolio/static/media/c.dccbba62.svg",
+    "static/media/figma.svg": "/portfolio/static/media/figma.5e209b95.svg",
+    "static/media/git.svg": "/portfolio/static/media/git.5eed2c8c.svg",
+    "static/media/header.jpeg": "/portfolio/static/media/header.97eb6b36.jpeg",
+    "static/media/Header.css": "/portfolio/static/media/header2-modified.0397701e.jpeg",
+    "static/media/heroku.svg": "/portfolio/static/media/heroku.4c4ba55d.svg",
+    "static/media/java.svg": "/portfolio/static/media/java.64f6e320.svg",
+    "static/media/javascript.svg": "/portfolio/static/media/javascript.8ee02715.svg",
+    "static/media/netlify.svg": "/portfolio/static/media/netlify.a375e07c.svg",
+    "static/media/postman.svg": "/portfolio/static/media/postman.f8e94173.svg",
+    "static/media/python.svg": "/portfolio/static/media/python.4948e676.svg",
+    "static/media/react.svg": "/portfolio/static/media/react.2ac4caf9.svg",
+    "static/media/sql.svg": "/portfolio/static/media/sql.f8ded136.svg",
+    "static/media/unity.svg": "/portfolio/static/media/unity.1ed7e1a6.svg"
+  }
+}

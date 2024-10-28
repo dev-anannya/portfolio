@@ -1,0 +1,247 @@
+/* Projects section */
+.projects-section {
+  padding-top: 170px;
+  padding-left: 2cm;
+  padding-right: 2cm;
+  padding-bottom: 180px; 
+  margin-bottom: 100px; 
+  background-color: black; /* Dark mode background */
+  color: white; /* Dark mode text color */
+  text-align: center;
+  transform: translateY(30px); /* Start slightly lower for slide-in */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.9s ease, transform 0.8s ease; /* Apply smooth transition */
+}
+
+.projects-section.visible {
+  opacity: 1; /* Fully visible when scrolled into view */
+  transform: translateY(0); /* Return to original position */
+}
+
+/* Light mode styles */
+.light-mode .projects-section {
+  background-color: #ffffff; /* Light mode background */
+  color: #333333; /* Light mode text color */
+}
+
+.projects-title {
+  font-family: 'Didot', serif;
+  font-size: 34px;
+  margin-bottom: 50px;
+}
+
+/* Carousel container */
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 70%; /* Reduce the width of the carousel for a sleeker look */
+  margin: 0 auto; /* Center the carousel */
+}
+
+/* Arrow buttons */
+.carousel-btn {
+  background: none;
+  border: none;
+  color: white; /* Dark mode arrow color */
+  font-size: 1.5rem; /* Smaller size for the arrow */
+  cursor: pointer;
+  z-index: 10;
+  padding: 5px; /* Reduce padding for a smaller look */
+  transition: color 0.3s ease;
+}
+
+.carousel-btn:hover {
+  color: #999; /* Hover color for arrows */
+}
+
+/* Light mode styles for arrow buttons */
+.light-mode .carousel-btn {
+  color: #333333; /* Light mode arrow color */
+}
+
+.left {
+  position: absolute;
+  left: -30px; /* Adjust position for sleeker alignment */
+}
+
+.right {
+  position: absolute;
+  right: -30px; /* Adjust position for sleeker alignment */
+}
+
+/* Slide container */
+.carousel-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 70%; /* Adjust width of the slide to fit carousel */
+}
+
+/* Thumbnail styling */
+.project-thumbnail {
+  width: 354px; /* Adjust thumbnail width to be rectangular */
+  max-height: 180px; /* Maintain aspect ratio */
+  border-radius: 15px; /* Rounded edges */
+  margin-right: 80px; /* Space between image and details */
+  object-fit: cover; /* Cover the area without distortion */
+  position: relative;
+}
+
+/* Light mode styles for project thumbnails */
+.light-mode .project-thumbnail {
+  border-radius: 10px; /* Maintain rounded edges */
+}
+
+.project-details {
+  text-align: left;
+  max-width: 50%; /* Limit text width */
+}
+
+.project-title {
+  font-family: 'Didot', serif;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.project-description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Buttons container */
+.project-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.project-btn {
+  background-color: transparent;
+  border: none;
+  color: white; /* Dark mode button text color */
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* Light mode styles for buttons */
+.light-mode .project-btn {
+  color: #333333; /* Light mode button text color */
+}
+
+.project-btn::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: white; /* Dark mode button hover color */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.project-btn:hover::after {
+  transform: scaleX(1);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .project-buttons {
+    flex-direction: column; /* Stack buttons vertically on smaller screens */
+    gap: 10px; /* Adjust gap between buttons */
+  }
+
+  /* Make underline visible at all times on small screens */
+  .project-btn::after {
+    transform: scaleX(0.7); /* Always show the underline on smaller screens */
+  }
+  .project-btn:hover::after{
+    transform: scaleX(0.7);
+  }
+}
+
+/* Carousel indicators (bubbles) */
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  background-color: #999;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+.indicator.active {
+  background-color: #fff;
+}
+
+.light-mode .indicator {
+  width: 10px;
+  height: 10px;
+  background-color: #999;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+.light-mode .indicator.active {
+  background-color: #333333;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .projects-section {
+    padding-top: 100px; /* Adjust padding */
+    padding-left: 1cm;
+    padding-right: 1cm;
+    padding-bottom: 100px; /* Adjust bottom padding */
+  }
+
+  .carousel {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    width: 100%; /* Full width for mobile */
+  }
+
+  .project-thumbnail {
+    width: 90%; /* Adjust thumbnail width for mobile */
+    margin-right: 0; /* Remove margin */
+    margin-bottom: 20px; /* Add margin below image */
+  }
+
+  .project-details {
+    max-width: 100%; /* Full width for text on mobile */
+    text-align: center; /* Center align text on smaller screens */
+  }
+
+  .project-title {
+    font-size: 24px; /* Adjust font size for title */
+  }
+
+  .project-description {
+    font-size: 16px; /* Adjust font size for description */
+  }
+
+  .project-buttons {
+    flex-direction: column; /* Stack buttons vertically on smaller screens */
+    gap: 10px; /* Adjust gap between buttons */
+  }
+}

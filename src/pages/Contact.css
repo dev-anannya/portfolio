@@ -1,0 +1,154 @@
+/* Contact section */
+.contact-section {
+  margin-top: 50px;
+  padding-top: 90px;
+  padding-left: 2cm;
+  padding-right: 2cm;
+  padding-bottom: 90px; 
+  margin-bottom: 50px; 
+  background-color: black; /* Dark background */
+  color: white; /* Light text */
+  padding: 50px; /* Ample padding */
+  text-align: center; /* Centered text */
+  background-color: black;
+  
+  /* Fade-in effect */
+  opacity: 0; /* Start hidden */
+  transform: translateY(30px); /* Start slightly lower */
+  transition: opacity 0.9s ease, transform 0.8s ease; /* Apply smooth transition */
+}
+
+.contact-section.visible {
+  opacity: 1; /* Fully visible when scrolled into view */
+  transform: translateY(0); /* Return to original position */
+}
+
+.contact-title {
+  font-family: 'Didot', serif;
+  font-size: 34px;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px; /* Space between form and info */
+}
+
+.contact-form input,
+.contact-form textarea {
+  display: flex;
+  width: 80%; /* Full width for inputs */
+  max-width: 500px; /* Limit maximum width */
+  min-width: 500px;
+  padding: 10px; /* Padding for inputs */
+  margin: 10px 0; /* Space between inputs */
+  border: none;
+  border-radius: 5px; /* Rounded edges */
+  background: #333; /* Input background */
+  color: white; /* Input text color */
+  font-family: 'Poppins', sans-serif; /* Input font */
+}
+
+.submit-button {
+  background-color: transparent;
+  border: none;
+  color: white; /* Button text color */
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+.submit-button::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: white; /* Underline color */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.submit-button:hover::after {
+  transform: scaleX(1);
+}
+
+.contact-info {
+  margin-top: 20px; /* Space above contact info */
+  color: white; /* Ensure text remains white */
+}
+
+/* Social links */
+.social-links a {
+  color: white; /* Keep icons white */
+  margin: 0 10px; /* Space between icons */
+  text-decoration: none; /* No underline */
+}
+
+.social-links {
+  color: white; /* Ensure social links stay white */
+}
+
+/* Light Mode Styles */
+.light-mode .contact-section {
+  background-color: black; /* Keep the background dark in light mode */
+}
+
+.light-mode .contact-info {
+  color: white; /* Keep text white in light mode */
+}
+
+.light-mode .social-links a {
+  color: white; /* Keep icons white in light mode */
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+  .contact-section {
+    padding-left: 1cm;
+    padding-right: 1cm;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .contact-title {
+    font-size: 28px; /* Slightly smaller font for smaller screens */
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%; /* Full width on smaller screens */
+    min-width: auto; /* Remove fixed min-width */
+  }
+
+  .contact-info {
+    font-size: 16px; /* Adjust font size for smaller screens */
+    text-align: center; /* Center align the contact info */
+  }
+
+  .social-links {
+    margin-top: 10px; /* Add some spacing above social links */
+    display: flex;
+    justify-content: center; /* Center the social links */
+  }
+
+  .submit-button {
+    padding: 8px 16px; /* Adjust padding for smaller screens */
+    font-size: 14px; /* Smaller font size for button */
+    transform: scaleX(1);
+  }
+  .submit-button::after{
+    transform: scaleX(1);
+  }
+  .submit-button:hover::after {
+    transform: scaleX(1);
+}}
