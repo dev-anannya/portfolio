@@ -1,0 +1,109 @@
+/* Skills section container */
+.skills-section {
+  margin-top: 140px;
+  padding-top: 150px;
+  padding-left: 2cm;
+  padding-right: 2cm;
+  padding-bottom: 90px;
+  margin-bottom: 50px;
+  background-color: black; /* Dark mode background */
+  color: #fff; /* Dark mode text color */
+  transform: translateY(30px); /* Start slightly lower for slide-in */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.9s ease, transform 0.8s ease; /* Apply smooth transition */
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center content */
+}
+
+/* Light mode styles */
+.light-mode .skills-section {
+  background-color: black; /* Dark mode background */
+  color: #fff; /* Dark mode text color */
+}
+
+.skills-section.visible {
+  opacity: 1; /* Fully visible when scrolled into view */
+  transform: translateY(0); /* Return to original position */
+}
+
+.skills-title {
+  font-family: 'Didot', serif;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* Container for dropdowns */
+.dropdowns {
+  display: flex; /* Use flexbox */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  justify-content: space-between; /* Space between dropdowns */
+  align-items: flex-start; /* Align dropdowns to the top */
+  gap: 20px; /* Adjust spacing between dropdowns */
+  width: 100%; /* Ensure full width */
+}
+
+/* Each dropdown takes an equal portion of the width */
+.dropdown {
+  flex: 1; /* Each dropdown takes equal space */
+  min-width: 250px; /* Minimum width for each dropdown */
+  margin: 0 10px; /* Add margin between dropdowns */
+}
+
+/* Style for the dropdown titles */
+.dropdown-title {
+  background-color: black; /* Dark mode background */
+  color: #fff; /* Dark mode text color */
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px;
+  border-bottom: 2px solid #fff;
+  font-weight: normal; /* Ensure the title is not bold */
+  text-align: center;
+}
+
+.light-mode .dropdown-title{
+  color: #fff;
+}
+/* Style for the dropdown list */
+.dropdown-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #444; /* Dark mode background */
+  color: #fff; /* Dark mode text color */
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+/* Dropdown list item style */
+.dropdown-list li {
+  padding: 10px;
+  border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: space-between; /* Space between text and logo */
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Logo styling */
+.skill-logo {
+  width: 20px;
+  height: auto;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .dropdowns {
+    flex-direction: column; /* Stack dropdowns vertically on smaller screens */
+    align-items: center; /* Center the dropdowns */
+  }
+  
+  .dropdown {
+    width: 100%; /* Make dropdowns full width */
+    margin-bottom: 20px; /* Add space between dropdowns */
+  }
+}

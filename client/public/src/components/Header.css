@@ -1,0 +1,120 @@
+/* src/components/Header.css */
+.header {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  height: 100vh;
+  padding-top: 60px; /* Space for the navbar */
+  background-image: url('../assets/images/header2-modified.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: transparent;
+}
+
+.header, #about-section {
+  border: none;
+}
+
+.light-mode .header {
+  background-color: white;
+}
+
+.light-mode .header-content h1 {
+  color: #fff;
+}
+
+.light-mode .header-content p {
+  color: #333;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.57);
+  z-index: 1;
+}
+
+.header-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: white;
+  font-family: 'Didot', serif;
+  text-align: center;
+  transition: transform 0.5s ease;
+}
+
+/* Initial large size */
+.header-content h1 {
+  font-size: 9rem; /* Magnified size */
+  margin: 0;
+  font-weight: normal;
+  text-transform: uppercase;
+  display: flex; /* This keeps the words side-by-side */
+  justify-content: center;
+  transition: font-size 0.6s ease;
+}
+
+/* Shrink when scrolled */
+.shrink h1 {
+  font-size: 3rem;
+}
+
+/* Optional: Additional styles for first and last name */
+.first-name, .last-name {
+  margin: 0 1.75rem; /* Add a little space between the two words */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1200px) {
+  .header-content h1 {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .header-content h1 {
+    font-size: 7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content h1 {
+    font-size: 3rem;
+    flex-direction: column; /* Stack first and last names vertically on smaller screens */
+  }
+
+  .first-name, .last-name {
+    margin: 0.5rem 0; /* Space between words vertically */
+  }
+}
+
+@media (max-width: 576px) {
+  .header-content h1 {
+    font-size: 3rem;
+  }
+
+  .header-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .header-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .header-content p {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,71 @@
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif; /* Use Poppins for body text */
+  background-color: black; /* Dark mode background */
+  color: #fff; /* White text color */
+  /* padding-top: 60px; Ensure the content is below the navbar */
+  /* padding-right: 15px; */
+  font-size: 18px; /* Base font size for body */
+}
+
+/* General headings (these should not interfere with the header in header.css) */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Didot', serif; /* Use Didot for headings */
+  margin: 20px 0; /* Margin around headings */
+}
+
+h1 {
+  font-size: 48px; /* Heading 1 size */
+}
+
+h2 {
+  font-size: 32px; /* Heading 2 size */
+}
+
+h3 {
+  font-size: 28px; /* Heading 3 size */
+}
+
+h4 {
+  font-size: 24px; /* Heading 4 size */
+}
+
+h5 {
+  font-size: 20px; /* Heading 5 size */
+}
+
+h6 {
+  font-size: 18px; /* Heading 6 size */
+}
+/* Navbar styles */
+.navbar {
+  z-index: 1000; /* Ensure navbar is on top */
+  background-color: #333; /* Navbar background color */
+  height: 4cm; /* Adjust height as needed */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2cm; /* Adjust padding as needed */
+}
+
+.light-mode h1, .light-mode h3, .light-mode h4, .light-mode h5, .light-mode h6 {
+  color: #000000; /* Heading color for light mode */
+}
+
+/* Navbar links */
+.navbar a {
+  color: #ffffff; /* Navbar link color */
+  text-decoration: none;
+  padding: 1cm; /* Add padding as needed */
+}
+
+/* Section styles excluding header (to avoid overriding header.css) */
+
+/* Dark mode toggle styles */
+.toggle {
+  cursor: pointer; /* Change cursor to pointer for toggle */
+}
